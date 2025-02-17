@@ -17,12 +17,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-
-      - name: Instalar dependencias
-        run: npm install
+      - name: Instalar Vercel CLI
+        run: npm install -g vercel
         
       - name: Desplegar en Vercel
         run: npx vercel --prod --token ${{ secrets.COSA }} --yes
+
 
 
     
